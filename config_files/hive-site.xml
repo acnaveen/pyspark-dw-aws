@@ -13,7 +13,7 @@
 
    <property>
       <name>hive.metastore.warehouse.dir</name>
-      <value>s3a://yourbucketname/pyspark-dw-aws/warehouse/</value>
+      <value>s3a://acnaveen/pyspark-dw-aws/warehouse/</value>
       <description>Synchronized to match your spark-defaults.conf S3 storage bucket target</description>
    </property>
 </configuration>
