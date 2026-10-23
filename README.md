@@ -8,7 +8,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/JupyterLab-4-F37626?logo=jupyter&logoColor=white)
-![License](https://img.shields.io/github/license/acnaveen/pyspark-dw-aws)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An end-to-end batch data warehouse for automotive dealer service data, built with **PySpark**, **Delta Lake** and **Amazon S3**, with a **Hive metastore** on PostgreSQL, all running locally in **Docker**.
 
