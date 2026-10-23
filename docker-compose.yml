@@ -1,0 +1,40 @@
+services:
+  metastore-db:
+    image: postgres:16
+    container_name: metastore-db
+    environment:
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hive
+      POSTGRES_DB: metastore
+    volumes:
+      - metastore-data:/var/lib/postgresql/data
+      - ./metastore-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hive -d metastore"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  pyspark-jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: acnaveen/pyspark-jupyter:4.2.0
+    container_name: pyspark-jupyter-lab
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:4040:4040"
+    volumes:
+      - ./notebooks:/pyspark-dw-aws/notebooks
+      - ./.aws:/root/.aws:ro
+    environment:
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME:?Set S3_BUCKET_NAME in .env}
+    init: true
+    depends_on:
+      metastore-db:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  metastore-data:

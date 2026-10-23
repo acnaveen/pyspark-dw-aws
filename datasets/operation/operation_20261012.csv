@@ -1,0 +1,16 @@
+operation_code,operation_name,operation_category
+OP-OIL,Oil and filter change,Maintenance
+OP-ROT,Tire rotation,Maintenance
+OP-BRK,Brake pad replacement,Repair
+OP-CAF,Cabin air filter replacement,Maintenance
+OP-TRN,Transmission fluid service,Maintenance
+OP-ALN,Wheel alignment,Maintenance
+OP-DIA,Diagnostic,Diagnostic
+OP-BAT,Battery replacement,Repair
+OP-EAF,Engine air filter replacement,Maintenance
+OP-CLT,Coolant flush,Maintenance
+OP-SPK,Spark plug replacement,Maintenance
+OP-TIR,Tire replacement,Repair
+OP-WPR,Wiper blade replacement,Maintenance
+OP-ACS,A/C system service,Repair
+OP-REC,Recall repair,Recall

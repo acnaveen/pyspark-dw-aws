@@ -1,0 +1,73 @@
+{
+  "repair_orders": [
+    {
+      "ro_number": "100001",
+      "dealer_id": "12345",
+      "customer_id": "1001",
+      "vin": "1N4BL4BV5RN123456",
+      "open_date": "2026-09-28",
+      "close_date": "2026-09-28",
+      "odometer": 15230,
+      "lines": [
+        {"line_number": 1, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-OIL", "part_code": null, "quantity": 0.5, "unit_price": 120.00, "line_amount": 60.00},
+        {"line_number": 2, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-OF100", "quantity": 1, "unit_price": 18.55, "line_amount": 18.55},
+        {"line_number": 3, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-OIL5W30", "quantity": 5, "unit_price": 9.00, "line_amount": 45.00}
+      ]
+    },
+    {
+      "ro_number": "100002",
+      "dealer_id": "23456",
+      "customer_id": "1002",
+      "vin": "JTMY1RFV8ND328287",
+      "open_date": "2026-09-29",
+      "close_date": "2026-09-30",
+      "odometer": 42110,
+      "lines": [
+        {"line_number": 1, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-ROT", "part_code": null, "quantity": 0.5, "unit_price": 120.00, "line_amount": 60.00},
+        {"line_number": 2, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-CAF", "part_code": null, "quantity": 0.3, "unit_price": 120.00, "line_amount": 36.00},
+        {"line_number": 3, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-CAF50", "quantity": 1, "unit_price": 22.00, "line_amount": 22.00}
+      ]
+    },
+    {
+      "ro_number": "100003",
+      "dealer_id": "12345",
+      "customer_id": "1001",
+      "vin": "1N4BL4BV5RN123456",
+      "open_date": "2026-10-05",
+      "close_date": "2026-10-05",
+      "odometer": 16890,
+      "lines": [
+        {"line_number": 1, "line_type": "Labor", "pay_type": "Warranty", "operation_code": "OP-BRK", "part_code": null, "quantity": 1.5, "unit_price": 120.00, "line_amount": 180.00},
+        {"line_number": 2, "line_type": "Part", "pay_type": "Warranty", "operation_code": null, "part_code": "PN-BP200", "quantity": 1, "unit_price": 85.00, "line_amount": 85.00},
+        {"line_number": 3, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-ROT", "part_code": null, "quantity": 0.5, "unit_price": 120.00, "line_amount": 60.00}
+      ]
+    },
+    {
+      "ro_number": "100004",
+      "dealer_id": "45678",
+      "customer_id": "1004",
+      "vin": "1FTFW1E55PFA45678",
+      "open_date": "2026-10-02",
+      "close_date": "2026-10-06",
+      "odometer": 61045,
+      "lines": [
+        {"line_number": 1, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-TRN", "part_code": null, "quantity": 2.0, "unit_price": 140.00, "line_amount": 280.00},
+        {"line_number": 2, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-ATF12", "quantity": 12, "unit_price": 11.50, "line_amount": 138.00}
+      ]
+    },
+    {
+      "ro_number": "100005",
+      "dealer_id": "34567",
+      "customer_id": "1003",
+      "vin": "1HGCY2F51RA345678",
+      "open_date": "2026-09-29",
+      "close_date": "2026-09-29",
+      "odometer": 28750,
+      "lines": [
+        {"line_number": 1, "line_type": "Labor", "pay_type": "Customer", "operation_code": "OP-OIL", "part_code": null, "quantity": 0.5, "unit_price": 120.00, "line_amount": 60.00},
+        {"line_number": 2, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-OF100", "quantity": 1, "unit_price": 18.50, "line_amount": 18.50},
+        {"line_number": 3, "line_type": "Part", "pay_type": "Customer", "operation_code": null, "part_code": "PN-OIL5W30", "quantity": 4, "unit_price": 9.00, "line_amount": 36.00}
+      ]
+    }
+  ]
+}

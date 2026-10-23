@@ -1,0 +1,2 @@
+customer_id,first_name,last_name,address,city,state,zipcode,email,phone_number,customer_type
+1013,John,Smith,123 Maple Street,Austin,TX,78701,john.smith@email.com,202-555-0147,individual

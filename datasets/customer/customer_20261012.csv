@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,address,city,state,zipcode,email,phone_number,customer_type
+1001,Maria,Lopez,8120 Rives Ave,Downey,CA,90241,maria.lopez@email.com,562-555-0141,individual
+1002,James,Carter,215 Howard St,San Francisco,CA,94105,j.carter@email.com,415-555-0178,individual
+1003,Parvati,Nair,600 S Spring St,Los Angeles,CA,90014,parvati.nair@email.com,213-555-0199,individual
+1004,Acme Plumbing Co,,2200 Ross Ave,Dallas,TX,75201,service@acmeplumbing.com,214-555-0123,business
+1005,Daniel,Kim,45 Beacon St,Boston,MA,02108,daniel.kim@email.com,617-555-0102,individual
+1006,Sofia,Rossi,310 W Madison St,Chicago,IL,60606,sofia.rossi@email.com,312-555-0145,individual
+1007,"Greenfield Landscaping, LLC",,77 Orchard Ln,Paramus,NJ,07652,info@greenfieldlandscaping.com,201-555-0188,business
+1008,Aisha,Khan,1802 Pine St,Seattle,WA,98101,aisha.khan@email.com,206-555-0133,individual
+1009,Robert,Nguyen,950 Collins Ave,Miami,FL,33139,r.nguyen@email.com,305-555-0166,individual
+1010,Emily,Johnson,5120 N Central Ave,Phoenix,AZ,85012,emily.j@email.com,602-555-0114,individual

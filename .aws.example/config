@@ -1,0 +1,3 @@
+# Copy this folder to .aws and set the region where your S3 bucket lives
+[default]
+region=your-aws-region

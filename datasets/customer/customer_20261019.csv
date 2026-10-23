@@ -1,0 +1,10 @@
+customer_id,first_name,last_name,address,city,state,zipcode,email,phone_number,customer_type
+1001,Maria,Lopez,450 Broadway,San Diego,CA,92101,maria.lopez@email.com,562-555-0141,individual
+1002,James,Carter,215 Howard St,San Francisco,CA,94105,james.carter@email.com,415-555-0199,individual
+1003,Parvati,Nair-Sharma,600 S Spring St,Los Angeles,CA,90014,parvati.nair@email.com,213-555-0199,individual
+1005,Daniel,Kim,45 Beacon St,Boston,MA,02108,daniel.kim@email.com,617-555-0102,business
+1006,Sofia,Rossi,500 W Madison St Unit 12,Chicago,IL,60606,sofia.rossi@email.com,312-555-0145,individual
+1007,"Greenfield Landscaping, LLC",,15 River Rd,Hackensack,NJ,07601,accounts@greenfieldlandscaping.com,201-555-0188,business
+1009,Robert,Nguyen,950 Collins Ave,Miami,FL,33139,r.nguyen@email.com,305-555-0166,individual
+1011,Carlos,Mendez,1420 Alamo Plaza,San Antonio,TX,78205,carlos.mendez@email.com,210-555-0127,individual
+1012,Hannah,Weiss,22 Elm St,Cambridge,MA,02139,hannah.weiss@email.com,617-555-0171,individual

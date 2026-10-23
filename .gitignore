@@ -1,0 +1,6 @@
+.aws/
+.env
+__pycache__/
+.ipynb_checkpoints/
+Thumbs.db
+desktop.ini

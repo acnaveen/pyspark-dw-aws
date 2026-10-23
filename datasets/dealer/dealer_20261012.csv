@@ -1,0 +1,11 @@
+dealer_id,dealer_name,oem_name,address,city,state,zipcode,phone_number
+12345,Downey Nissan,Nissan,7321 Firestone Blvd,Downey,CA,90241,562-555-0100
+23456,Bay Area Toyota,Toyota,1500 Mission St,San Francisco,CA,94103,415-555-0120
+34567,San Diego Honda,Honda,3500 Kearny Mesa Rd,San Diego,CA,92123,858-555-0133
+45678,Lone Star Ford,Ford,4100 Lemmon Ave,Dallas,TX,75219,214-555-0145
+56789,Beacon Hill Subaru,Subaru,88 Commonwealth Ave,Boston,MA,02116,617-555-0158
+67890,Garden State Hyundai,Hyundai,420 Route 17 North,Paramus,NJ,07652,201-555-0162
+78901,"Rivera, Gomez & Sons Chevrolet",Chevrolet,2750 E Camelback Rd,Phoenix,AZ,85016,602-555-0177
+89012,Lakeshore Kia,Kia,1900 N Clark St,Chicago,IL,60614,312-555-0184
+90123,Pacific Northwest Mazda,Mazda,3300 Aurora Ave N,Seattle,WA,98103,206-555-0191
+11223,Sunshine BMW of Miami,BMW,1200 Biscayne Blvd,Miami,FL,33132,305-555-0106

@@ -1,0 +1,6 @@
+.aws
+.env
+.git
+datasets
+notebooks
+metastore-init
