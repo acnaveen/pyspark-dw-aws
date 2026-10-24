@@ -2,5 +2,6 @@
 .env
 __pycache__/
 .ipynb_checkpoints/
+.Trash-0/
 Thumbs.db
 desktop.ini
