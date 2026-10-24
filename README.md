@@ -31,6 +31,7 @@ Raw CSV and JSON files land in S3 each week and move through three layers (landi
 - [Project structure](#project-structure)
 - [Getting started](#getting-started)
 - [Running the pipeline](#running-the-pipeline)
+- [Query with Athena](#query-with-athena)
 - [What each weekly run demonstrates](#what-each-weekly-run-demonstrates)
 - [License](#license)
 
@@ -236,6 +237,8 @@ Every notebook writes a row to `prd.job_control` when it finishes. Staging reads
 ```
 pyspark-dw-aws/
 ├── .aws.example/             # template for AWS credentials (copy to .aws/)
+├── athena/
+│   └── create_tables.sql     # registers the prd tables in Athena / Glue
 ├── config_files/
 │   ├── hive-site.xml         # Hive metastore -> Postgres connection
 │   └── spark-defaults.conf   # Delta, S3A and Hive settings
@@ -456,6 +459,49 @@ docker compose down -v     # stop and also delete the metastore volume
 ```
 
 If you delete the metastore volume, the Delta data in S3 remains but Spark no longer knows the tables exist. Run `99_01` to start fresh.
+
+---
+
+## Query with Athena
+
+The production tables are Delta tables in S3, so you can also query them with [Amazon Athena](https://aws.amazon.com/athena/). Athena reads table definitions from the AWS Glue Data Catalog, not from the local Hive metastore, so each table needs to be registered there once.
+
+### 1. Set up Athena (first time only)
+
+1. In the AWS console, open **Athena** and switch to the **same region as your bucket**.
+2. Open the **query editor**. If asked for a query result location, click **Edit settings** and enter a path such as `s3://<your_s3_bucket_name>/athena-results/`.
+3. In the left panel, set **Data source** to `AwsDataCatalog`.
+
+### 2. Register the tables
+
+Open [`athena/create_tables.sql`](athena/create_tables.sql), replace `<your_s3_bucket_name>` with your bucket name, and run the statements in the Athena query editor. The editor runs **one statement at a time**, so run them one by one (the **+** button opens a new tab for each).
+
+Each statement looks like this:
+
+```sql
+CREATE EXTERNAL TABLE IF NOT EXISTS prd.dim_customer
+LOCATION 's3://<your_s3_bucket_name>/pyspark-dw-aws/warehouse/prd.db/dim_customer/'
+TBLPROPERTIES ('table_type' = 'DELTA');
+```
+
+No column list is needed: Athena reads the schema from the Delta transaction log.
+
+### 3. Query
+
+Select the `prd` database on the left and query as usual:
+
+```sql
+SELECT customer_id, address, city, is_current, effective_start_date, effective_end_date
+FROM prd.dim_customer
+ORDER BY customer_id, effective_start_date;
+```
+
+Notes:
+
+- Tables only need registering once. Athena reads the Delta log on every query, so new pipeline runs show up automatically.
+- If `99_01` recreates the tables, they're written to the same S3 paths, so the Athena tables keep working.
+- The IAM user from [step 3](#3-create-an-iam-user-and-access-key) only has S3 access. Use your own console user for Athena, or give that user Athena and Glue permissions.
+- Athena charges by data scanned. With this sample data, queries cost next to nothing.
 
 ---
 
